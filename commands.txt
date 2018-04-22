@@ -1,0 +1,5 @@
+1. Install Router
+npm i react-router-dom
+
+2. Add to webpack to render routering via Client side
+historyApiFalback: true
