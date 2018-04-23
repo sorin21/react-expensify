@@ -3,3 +3,5 @@ npm i react-router-dom
 
 2. Add to webpack to render routering via Client side
 historyApiFalback: true
+
+3. npm i redux
