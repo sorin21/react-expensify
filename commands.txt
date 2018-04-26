@@ -5,3 +5,15 @@ npm i react-router-dom
 historyApiFalback: true
 
 3. npm i redux
+
+4. Install unic id generator
+npm install uuid
+
+5. Install Object rest spread transform
+npm install --save-dev babel-plugin-transform-object-rest-spread
+ 
+ - then add it to .babelrc file
+
+{
+  "plugins": ["transform-object-rest-spread"]
+}
