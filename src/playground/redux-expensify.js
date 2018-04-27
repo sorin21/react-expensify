@@ -36,11 +36,14 @@ const setTextFilter = (text = '') => ({
 });
 
 // SORT_BY_DATE
-const sortbyDate = (sortBy) => ({
+const sortbyDate = () => ({
   type: 'SORT_BY_DATE',
-  sortBy
 })
+
 // SORT_BY_AMOUNT
+const sortbyAmount = () => ({
+  type: 'SORT_BY_AMOUNT',
+})
 // SET_START_DATE
 // SET_END_DATE
 
@@ -92,13 +95,15 @@ const filterReducer = (state = filterReducerDefaultState, action) => {
         // overwrite text prop
         text: action.text
       }
+    case 'SORT_BY_AMOUNT':
+      return {
+        ...state,
+        sortBy: 'amount'
+      }
     case 'SORT_BY_DATE':
-      if(action.sortBy === 'date') {
-        // return new date
-        return {
-          ...state,
-          orderBy: action.orderBy
-        }
+      return {
+        ...state,
+        sortBy: 'date'
       }
     default:
       return state;
@@ -132,6 +137,7 @@ store.dispatch(setTextFilter('rent'));
 store.dispatch(setTextFilter());
 
 // store.dispatch(sortbyAmount());
+store.dispatch(sortbyAmount());
 store.dispatch(sortbyDate());
 
 // console.log(expenseOne);
