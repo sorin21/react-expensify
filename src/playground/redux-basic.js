@@ -1,9 +1,5 @@
 import {createStore} from 'redux';
 
-const initialState = {
-  count: 0
-};
-
 // normal add function
 const add1 = (data) => {
   return data.a + data.b
@@ -15,6 +11,11 @@ const add1 = (data) => {
 const add2 =({a, b}, c) => {
   return a + b + c;
 }
+
+
+const initialState = {
+  count: 0
+};
 
 // Action generators - functions that return action objects
 // const incrementCount = (payload = {}) => ({
