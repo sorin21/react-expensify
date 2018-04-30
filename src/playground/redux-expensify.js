@@ -122,23 +122,23 @@ store.subscribe(() => {
 })
 
 // 4. Dispatch
-const expenseOne = store.dispatch(addExpense({ description: 'Rent', amount: 100}));
-const exepenseTwo = store.dispatch(addExpense({ description: 'Cofee', amount: 300}));
+// const expenseOne = store.dispatch(addExpense({ description: 'Rent', amount: 100}));
+// const exepenseTwo = store.dispatch(addExpense({ description: 'Cofee', amount: 300}));
 
-store.dispatch(removeExpense({id: expenseOne.expense.id}));
+// store.dispatch(removeExpense({id: expenseOne.expense.id}));
 
-// 1st arg = get the id
-// 2nd arg = updated object description or note, etc
-store.dispatch(editExpense(exepenseTwo.expense.id, { amount: 500, note: 'Paris price too big :)' }))
+// // 1st arg = get the id
+// // 2nd arg = updated object description or note, etc
+// store.dispatch(editExpense(exepenseTwo.expense.id, { amount: 500, note: 'Paris price too big :)' }))
 
-// add rent to text prop from filters obj
-store.dispatch(setTextFilter('rent'));
-// make again text value an empty string
-store.dispatch(setTextFilter());
+// // add rent to text prop from filters obj
+// store.dispatch(setTextFilter('rent'));
+// // make again text value an empty string
+// store.dispatch(setTextFilter());
 
+// // store.dispatch(sortbyAmount());
 // store.dispatch(sortbyAmount());
-store.dispatch(sortbyAmount());
-store.dispatch(sortbyDate());
+// store.dispatch(sortbyDate());
 
 // console.log(expenseOne);
 
