@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import {addExpense} from './actions/expenses';
@@ -19,4 +20,13 @@ const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 
 console.log(visibleExpenses);
 
-ReactDOM.render(<AppRouter />, document.getElementById('app'));
+// Provider is gonna to provide the store to all components
+// We have to apss a single prop to provider, the store, 
+// that we want to share with the rest of application
+const jsx = (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
+);
+
+ReactDOM.render(jsx, document.getElementById('app'));
