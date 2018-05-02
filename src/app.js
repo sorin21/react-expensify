@@ -11,14 +11,20 @@ import './styles/styles.scss';
 
 const store = configureStore();
 
-store.dispatch(addExpense({ description: 'Rent', amount: 100}))
-store.dispatch(addExpense({ description: 'Water Bill', amount: 30}))
-store.dispatch(setTextFilter('water'));
+store.dispatch(addExpense({ description: 'Rent', amount: 1000}))
+store.dispatch(addExpense({ description: 'Water Bill', amount: 300, createdAt: 1000}))
+store.dispatch(addExpense({ description: 'Gas Bill', amount: 500 }))
+
+// store.dispatch(setTextFilter('water'));
+
+// setTimeout(() => {
+//   store.dispatch(setTextFilter('rent'));
+// }, 3000);
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 
-console.log(visibleExpenses);
+console.log('din app.js visibleExpenses', visibleExpenses);
 
 // Provider is gonna to provide the store to all components
 // We have to apss a single prop to provider, the store, 
