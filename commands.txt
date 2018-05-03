@@ -20,3 +20,12 @@ npm install --save-dev babel-plugin-transform-object-rest-spread
 
 6. Install React Redux 
 npm i  react-redux 
+
+7. Install momentjs and airbnb
+http://momentjs.com/
+
+https://github.com/airbnb/react-dates
+
+npm i moment react-dates react-addons-shallow-compare
+
+- react dates require a dependecy: react-addons-shallow-compare
