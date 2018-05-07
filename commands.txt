@@ -29,3 +29,13 @@ https://github.com/airbnb/react-dates
 npm i moment react-dates react-addons-shallow-compare
 
 - react dates require a dependecy: react-addons-shallow-compare
+
+8. Add redux dev tool to browser
+https://github.com/zalmoxisus/redux-devtools-extension
+
+- change the store
+
+const store = createStore(
+   reducer, /* preloadedState, */
++  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+ );

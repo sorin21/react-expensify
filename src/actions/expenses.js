@@ -16,9 +16,10 @@ export const addExpense = ({ description = '', note = '', amount = 0, createdAt 
 });
 
 // REMOVE_EXPENSE
-export const removeExpense = ({ id } = {}) => ({
+export const removeExpense = ({ id, message } = {}) => ({
   type: 'REMOVE_EXPENSE',
-  id
+  id,
+  message
 })
 
 // EDIT_EXPENSE
