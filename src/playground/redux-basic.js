@@ -52,6 +52,7 @@ const add = (b) => {
 };
 
 // Reducer
+// Reducers specify how the application's state changes in response to actions sent to the store
 // 1.Reducers are pure functions(the output is only determined by input)
 // in our case this func output, what it returns it is only determinet 
 // by things that are passed in, the state and the action

@@ -39,3 +39,11 @@ const store = createStore(
    reducer, /* preloadedState, */
 +  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
  );
+
+9. Install Jest Testing 
+https://facebook.github.io/jest/docs/en/getting-started.html
+
+npm install --save-dev jest
+
+10. Start Jest test 
+npm run test 
