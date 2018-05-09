@@ -43,6 +43,8 @@ const store = createStore(
 9. Install Jest Testing 
 https://facebook.github.io/jest/docs/en/getting-started.html
 
+- add test prop in package.json
+
 npm install --save-dev jest
 
 10. Start Jest test 
