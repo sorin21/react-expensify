@@ -12,7 +12,7 @@ const filterReducer = (state = filterReducerDefaultState, action) => {
       return {
         ...state, // overwrite text prop
         text: action.text
-      };
+      };  
     case "SORT_BY_AMOUNT":
       return { ...state, sortBy: "amount" };
     case "SORT_BY_AMOUNT":

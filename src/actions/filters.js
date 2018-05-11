@@ -25,3 +25,4 @@ export const setEndDate = endDate => ({
   type: "END_DATE",
   endDate
 });
+
