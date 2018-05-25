@@ -13,10 +13,9 @@ const add2 =({a, b}, c) => {
 }
 
 
-const initialState = {
-  count: 0
-};
+/*################ Action generators ################ */
 
+// Allow us to change to Redux Store
 // Action generators - functions that return action objects
 // const incrementCount = (payload = {}) => ({
 //   type: 'INCREMENT',
@@ -51,12 +50,18 @@ const add = (b) => {
   return a + b;
 };
 
-// Reducer
+
+/*################ Reducer ################ */
+
 // Reducers specify how the application's state changes in response to actions sent to the store
 // 1.Reducers are pure functions(the output is only determined by input)
 // in our case this func output, what it returns it is only determinet 
 // by things that are passed in, the state and the action
 // 2. Never change directly the state or action
+const initialState = {
+  count: 0
+};
+
 const countReducer = (state = initialState, action) => {
   // we handle the dispatch calls
   switch (action.type) {
@@ -88,7 +93,8 @@ const countReducer = (state = initialState, action) => {
 };
 
 
-// Store 
+/*################ Store ################ */
+
 // we access the action object here, sec argument
 const store = createStore(countReducer);
 
@@ -100,7 +106,9 @@ const unsubscribe = store.subscribe(() => {
 });
 
 
-// Dispatching Action
+
+/*################ Dispatching Action ################ */
+
 // in dispatch we have an action object
 // so we dispatch actions
 // store.dispatch({

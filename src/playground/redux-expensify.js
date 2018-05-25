@@ -1,7 +1,9 @@
 import { createStore, combineReducers } from 'redux';
 import uuid from 'uuid';
 
-// 3. ACTIONS:
+
+/*################ ACTIONS ################ */
+  // 3. 
 // ADD_EXPENSE
 // destruct the 1st argument
 // if doesn't exist we desctruct an empty object
@@ -58,7 +60,8 @@ const setEndDate = endDate => ({
 });
 
 
-// 1. Expensed Reducer
+/*################ EXPENSE REDUCER ################ */
+// 1. 
 const expensesReducerDefaultState = [];
 const expensesReducer = (state = expensesReducerDefaultState, action) => {
   switch (action.type) {
@@ -91,7 +94,9 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
 };
 
 
-// 1a. Filter Reducer
+
+/*################ FILTER REDUCER ################ */
+// 1a. 
 const filterReducerDefaultState = {
   text: '',
   sortBy: 'date', // data or amount
@@ -143,12 +148,17 @@ const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
   });
 };
 
-// 2. Store
+
+
+/*################ STORE ################ */
+// 2. 
 const store = createStore(combineReducers({
   expenses: expensesReducer,
   filters: filterReducer
 }));
 
+
+/*################ SUBSCRIBE ################ */
 // 5. Track, watch for changes for redux store
 store.subscribe(() => {
   const state = store.getState();
@@ -156,7 +166,9 @@ store.subscribe(() => {
   console.log(visibleExpenses);
 })
 
-// 4. Dispatch
+
+/*################ DISPATCH ################ */
+// 4. 
 const expenseOne = store.dispatch(addExpense({ description: 'Rent', amount: 100, createdAt: -21000 }));
 const exepenseTwo = store.dispatch(addExpense({ description: 'Cofee', amount: 300, createdAt: -1000 }));
 
